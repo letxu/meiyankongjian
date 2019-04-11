@@ -1,0 +1,11 @@
+<view class="package-status">
+  <view class="status-box">
+    <view class="status-list">
+      <view class="li" wx:for="{{list}}" wx:key="">
+        <view class="status-content-before">{{item.context}}</view>
+        <view class="status-time-before">{{item.time}}</view>
+        <view class="status-line"></view>
+      </view>
+    </view>
+  </view>
+</view>

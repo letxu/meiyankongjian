@@ -1,0 +1,23 @@
+<view class="dealers-title">
+  <text>
+   返现明细
+  </text>
+</view>
+<view class="dealers-item" wx:for="{{list}}" >
+  <view class="title">返现说明：
+    <text>{{item.content}}</text>
+  </view>
+   <view>订单号：
+    <text>{{item.order_sn}}</text>
+  </view>
+  <view>昵 称：
+    <text>{{item.wx_nikename}}</text>
+  </view>
+   <view>返现金额：
+    <text>{{item.money}}</text>
+  </view>
+   <view>返现时间：
+    <text>{{item.create_time}}</text>
+  </view>
+</view>
+

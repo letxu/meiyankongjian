@@ -1,0 +1,115 @@
+<!--pages/productDetail/productDetail.wxml-->
+<import src="/components/share.wxml" />
+<import src="../../wxParse/wxParse.wxml" />
+<view>
+  <view>
+    <view class="my-swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{goods.goods_info.goods_album}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{url}}{{item}}" class="slide-image" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="pro_con">
+      <view class="price">
+        <text style='color:#000;margin-left:0'>{{goods.goods_info.ordinary_user_price_title}}\r\t\r\t\r\t</text>￥{{goods.goods_info.ordinary_user_price}}
+      </view>
+      <view class="name">
+        {{goodsName}}
+      </view>
+      <!-- <view class="send">
+        免邮费
+      </view> -->
+    </view>
+
+    <view class="pro-item" style='text-align:center'>
+      图文详情
+    </view>
+    <view class="detail-img">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+
+  </view>
+  <view class="btns" hidden="{{shows}}">
+    <button class="info" bindtap='toAddShopCar'>加入购物车</button>
+    <button class="buy" bindtap='buy'>立即购买</button>
+  </view>
+  <view class="modal-mask" wx:if="{{showModal}}"></view>
+
+  <view class="right-tab">
+    <view class="q-tab cover" hidden='{{!showModal1}}'>
+      <navigator class="cover" url='/pages/index/index' open-type="reLaunch" hover-class='none'>
+        <image src="/images/to-index.png"></image>
+      </navigator>
+      <navigator class="cover cart-cover" url='/pages/cart/cart' open-type="reLaunch" hover-class='none'>
+        <image src="/images/to-cart.png"></image>
+      </navigator>
+      <navigator class="cover" url='/pages/user/user' open-type="reLaunch" hover-class='none'>
+        <image src="/images/to-me.png"></image>
+      </navigator>
+    </view>
+    <view class="cover" bindtap='showMask' hidden='{{!show}}'>
+      <image src="/images/nav-icon.png"></image>
+    </view>
+    <view class="cover close-cover" bindtap='showMaskClose' hidden='{{show}}'>
+      <image src="/images/tab-close.png"></image>
+    </view>
+    <button open-type="contact">
+      <image src="/images/serve-icon.png"></image>
+    </button>
+
+    <view class="cover" bindtap='backTop' wx:if="{{backTopValue ==true}}">
+      <image src="/images/to-top.png"></image>
+    </view>
+  </view>
+  <view class='show-popup' hidden="{{hideShopPopup}}">
+    <view class='popup-mask'></view>
+    <view class='popup-content'>
+      <view class='pop-info'>
+        <view class='pop-img'>
+          <image src='{{url}}{{goods.goods_info.goods_thumbnail}}'></image>
+        </view>
+        <view class='pop-info-con'>
+          <view class='pop-info-tit'>{{goods_optional.length}} {{goodsName}}</view>
+          <view class='pop-info-price' wx:if='{{goods.goods_optional.length>0}}'>
+            <view> {{goods.goods_info.ordinary_user_price_title}}\r\t\r\t￥{{opt_price}}</view>
+            <view style='margin-top:15rpx;font-weight:normal;font-size:25rpx'>商品库存\r\t\r\t {{stock}}</view>
+          </view>
+          <view class='pop-info-price' wx:else>
+            <view>{{goods.goods_info.ordinary_user_price_title}}\r\t\r\t￥{{goods.goods_info.ordinary_user_price}}</view>
+
+          </view>
+        </view>
+        <image class='pop-close' src='/images/popup-close.png' bindtap='toClosePopup'></image>
+      </view>
+      <view class='label-box' wx:if="{{goods.goods_optional.length>0}}">
+        <view class='label-title'>{{goods.goods_optional[0].name}}</view>
+        <view class='label-item-box' wx:for="{{goods.goods_optional[0].opt_text}}" wx:key="{{goods.goods_optional[0].id}}">
+          <view class="label-item {{index==ifShow ? 'active' : ''}}" data-id='{{skuId}}' data-index='{{index}}' bindtap='labelItemTap'>{{item}}</view>
+        </view>
+      </view>
+      <view class='label-box' wx:if="{{goods.goods_optional.length>1}}">
+        <view class='label-title'>{{goods.goods_optional[1].name}}</view>
+        <view class='label-item-box' wx:for="{{goods.goods_optional[1].opt_text}}" wx:key="{{goods.goods_optional[1].id}}">
+          <view class="label-item {{index==ifShow1 ? 'active' : ''}}" data-id='{{skuId1}}' data-index='{{index}}' bindtap='labelItemTap1'>{{item}}</view>
+        </view>
+      </view>
+      <view class='buy-num-box clearfix' >
+        <view class='num-tit'>购买数量</view>
+        <view class='num-box'>
+          <view class='num-less' bindtap='numLess'>-</view>
+          <view class='num-show'>
+            <view>{{buyNumber}}</view>
+          </view>
+          <view class='num-plus' bindtap='numPlus'>+</view>
+        </view>
+      </view>
+      <button class='pop-confirm' wx:if="{{shopType =='addShopCar'}}" bindtap="addCart">加入购物车</button>
+      <button class='pop-confirm' wx:if="{{shopType =='tobuy'}}" bindtap="buyNow">立即购买</button>
+    </view>
+  </view>
+  <template is="share" />
+</view>

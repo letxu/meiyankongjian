@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/productDetail/productDetail",
+    "pages/list/list",
+    "pages/user/user",
+    "pages/cart/cart",
+    "pages/user/orderList/orderList",
+    "pages/classifys/classify/classify",
+    "pages/authorize/authorize",
+    "pages/user/addAddress/addAddress",
+    "pages/user/addressList/addressList",
+    "pages/user/addressModify/addressModify",
+    "pages/user/addressAdd/addressAdd",
+    "pages/user/apply-dealers/apply-dealers",
+    "pages/user/area-generation/area-generation",
+    "pages/user/dealers/dealerDetail/dealerDetail",
+    "pages/user/dealers/dealers",
+    "pages/user/make-money/addCard/addCard",
+    "pages/user/make-money/make-money",
+    "pages/user/make-money/cardList/cardlist",
+    "pages/classifys/classifyList",
+    "pages/to-pay-order/index",
+    "pages/user/card/card",
+    "pages/productList/productList",
+    "pages/user/make-money/log/log",
+    "pages/user/make-money/instructions/instructions",
+    "pages/user/make-money/account/account",
+    "pages/user/make-money/account/account-money/account-money",
+    "pages/user/make-money/account/top-up/top-up",
+    "pages/user/make-money/account/top-up/topUp-instructions/topUp-instructions",
+    "pages/user/make-money/account/binding-mobile/binding-mobile",
+    "pages/user/invitation/invitation",
+    "pages/user/dealers/last/last",
+    "pages/index/vipLog/vipLog",
+    "pages/index/aDetail/aDetail",
+    "pages/user/orderList/logistics/logistics"
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wx5b4bf407fbe7c685"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#181818",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/index-icon.png",
+        "selectedIconPath": "/images/index-hover.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/cartIcon.png",
+        "selectedIconPath": "images/cart-active.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user-icon.png",
+        "selectedIconPath": "images/user-active.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

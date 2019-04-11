@@ -1,0 +1,38 @@
+/*总体主盒子*/
+
+page {
+  background: #eee;
+}
+
+.zone {
+  width: 700rpx;
+  margin: 35rpx auto 0;
+  background: #fff;
+  border-radius: 25rpx;
+  padding-bottom: 25rpx;
+}
+.list-img{
+  width: 640rpx;
+  margin: 0 auto;
+}
+.zone image {
+  width: 310rpx;
+  height: 88.57rpx;
+  margin: 20rpx 0 0 0;
+  float: left
+}
+.zone image:nth-child(2n){
+  margin-left: 20rpx
+}
+.zone .title {
+  font-size: 28rpx;
+  padding: 25rpx;
+  position: relative
+}
+.zone .title image{
+  width: 12rpx;
+  height: 21rpx;
+  position: absolute;
+  right: 35rpx;
+  top: 15rpx;
+}

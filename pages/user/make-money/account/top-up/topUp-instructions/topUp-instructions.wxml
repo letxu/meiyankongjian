@@ -1,0 +1,9 @@
+<import src="../../../../../../wxParse/wxParse.wxml" />
+<view class="dealers-title">
+  <text>
+   充值说明
+  </text>
+</view>
+<view class="text">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

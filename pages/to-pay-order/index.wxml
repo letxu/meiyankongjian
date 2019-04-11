@@ -1,0 +1,75 @@
+<view class="container">
+  <form bindsubmit="createOrder" report-submit="true">
+    <view class='main'>
+      <view class='address-box' hidden="{{addressShow}}" bindtap='toAddressList'>
+        <view class='address-top clearfix'>
+          <text class='add-name'>{{addressList.consignee}}</text>
+          <text class='add-tel'>{{addressList.mobile}}</text>
+        </view>
+        <view class='add-con'>
+          <image src='/images/orderModify-add.png' />
+          <text class='addCon'>{{addressList.address}}</text>
+        </view>
+        <image class='addRight' src='/images/arrow-right.png'></image>
+      </view>
+      <view class='address-box' hidden="{{!addressShow}}" bindtap='toAddressAdd'>
+        <view class='address-ts'>新增收货地址</view>
+        <image class='addRight' src='/images/arrow-right.png'></image>
+      </view>
+    </view>
+    <view class="goods-list">
+      <view class="list-title">商品列表</view>
+      <view class="a-goods" wx:for-items="{{order.goods}}" wx:key="{{index}}">
+        <view class="img-box">
+          <image src="{{url}}{{item.goods_thumbnail}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{item.goods_name}}</view>
+            <view class="goods-price" wx:if='{{item.opt_text== undefined}}'>¥ {{item.ordinary_user_price}}</view>
+            <view class="goods-price" wx:else>¥{{item.opt_price}}</view>
+          </view>
+          <view class="arow">
+            <!-- <view class="goods-label">{{item.label}}</view> -->
+              <view class="goods-num" wx:if='{{item.opt_text== undefined}}'>x {{item.goods_number}}</view>
+            <view class="goods-num" wx:else> {{item.opt_text}}  x {{item.goods_number}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="peisong-way">
+      <view class="row-box">
+        <view class="row-label">备注</view>
+        <view class="right-text">
+          <input name="remark" type="text" class="liuyan" placeholder="如需备注请输入" />
+        </view>
+      </view>
+      <view class="row-box" wx:if="{{level==0}}">
+        <view class="row-label">配送方式</view>
+        <view wx:if="{{totalMoney>200}}" class="right-text">包邮</view>
+        <view wx:if="{{totalMoney<=200}}" class="right-text red" bindtap='toCoupons'>邮费： ¥{{postage}} </view>
+      </view>
+      <view class="row-box" wx:if="{{level!=0}}">
+        <view class="row-label">配送方式</view>
+        <view wx:if="{{totalMoney>200}}" class="right-text">包邮</view>
+        <view wx:if="{{totalMoney<=200}}" class="right-text red" bindtap='toCoupons'>邮费： ¥{{postage}} </view>
+      </view>
+      <view class="card-item {{curIndex == index ? 'active' : ''}}" wx:for="{{payType}}" data-id='{{item.id}}' data-index='{{index}}' bindtap='couponCheck'>
+        <image src="https://cdn.it120.cc/images/weappshop/gou.png" class="icon-nomal"></image>
+        <image src="https://meiyankongjian.com/rejiangupload/yes.png" class="icon-active"></image>
+        <view class="card-right">
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="jiesuan-box" >
+      <view class="left-price"  wx:if="{{totalMoney>200}}">
+        <view class="total" >合计：¥ {{totalMoney}} </view>
+      </view>
+       <view class="left-price" wx:if="{{totalMoney<=200}}">
+        <view class="total" >合计：¥ {{totalMoney+postage}} </view>
+      </view>
+      <button class="to-pay-btn" formType="submit" bindtap='pay'>提交订单</button>
+    </view>
+  </form>
+</view>

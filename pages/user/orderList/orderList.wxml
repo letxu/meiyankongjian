@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="menu flex_row">
+    <view bindtap="swichNav" class="menu-list {{index == currentTab ? 'menu-list-on' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}" data-current="index">
+      {{item}}
+    </view>
+  </view>
+  <view class="no-order" hidden="{{orderList ? true : false}}">
+    <image src="/images/no-order.png" class="no-order-img"></image>
+    <view class="text">暂无订单</view>
+  </view>
+  <view class="order-list">
+    <view class="a-order" wx:for="{{orderList}}" wx:key="{{item.order_id}}">
+      <view class="order-date">
+        <view class="date-box">
+          <text style='margin-right:20rpx;'>{{item.created_date}} </text>{{item.order_sn}}</view>
+        <view class="yellow" wx:if="{{item.order_status==1}}">待付款</view>
+        <view class="yellow" wx:if="{{item.order_status==2}}">待发货</view>
+        <view class="yellow" wx:if="{{item.order_status==3}}">卖家已发货</view>
+        <view class="yellow" wx:if="{{item.order_status==4}}">已完成</view>
+      </view>
+      <view wx:for="{{item.goods}}" bindtap='toDetail' data-id='{{item.goods_id}}' wx:key="">
+        <scroll-view class="goods-img-container" scroll-x="true">
+          <view class="img-box">
+            <image src="{{url}}{{item.goods_thumbnail}}" class="goods-img"></image>
+          </view>
+          <view class="content-box">
+            <view class="box-title">{{item.goods_name}}</view>
+            <view class="box-price"  wx:if='{{item.content!=null}}'>
+              {{item.content}} ￥{{item.goods_price}}
+              <text class="num">x{{item.goods_number}}</text>
+            </view>
+              <view class="box-price"  wx:else>
+              ￥{{item.goods_price}}
+              <text class="num">x{{item.goods_number}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="price-box">
+        <view class="left-text">共{{item.goods.length}}件商品 合计：
+          <text class="total-price">¥ {{item.order_money}}</text>
+        </view>
+        <view data-id='{{item.order_id}}' class="btn topay-btn" bindtap="toPayTap" wx:if="{{item.order_status==1}}">去支付</view>
+        <view data-id='{{item.order_id}}' class="btn topay-btn" bindtap="toConfirm" wx:if="{{item.order_status==1}}">取消订单</view>
+        <button data-id='{{item.order_id}}' class="btn topay-btn" open-type="contact" wx:if="{{item.order_status==2}}">
+          联系客服
+        </button>
+            <view data-id='{{item.order_id}}' class="btn topay-btn" bindtap="toWuliu" wx:if="{{item.order_status==3}}">查看物流</view>
+        <view data-id='{{item.order_id}}' class="btn topay-btn" bindtap="toCancel" wx:if="{{item.order_status==3}}">确认收货</view>
+        <!-- <view class="btn topay-btn"  bindtap="toRetrun" wx:if="{{item.order_status==4}}">确认收货</view> -->
+      </view>
+      <view class="order-date" wx:if="{{item.order_status==3}}">
+        <view class="date-box">
+          快递单号: {{item.courier_number}}</view>
+      </view>
+    </view>
+  </view>
+</view>

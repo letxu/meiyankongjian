@@ -1,0 +1,418 @@
+.address-top {
+  width: 100%;
+  padding-top: 28rpx;
+  display: inline-block;
+}
+
+.add-name {
+  float: left;
+  max-width: 50%;
+  height: 50rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  color: #333;
+  margin-left: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.add-tel {
+  float: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  color: #333;
+  margin-left: 40rpx;
+}
+
+.add-con {
+  width: 100%;
+  height: 28rpx;
+  margin-top: 15rpx;
+}
+
+.address-box {
+  position: relative;
+  width: 100%;
+  height: 150rpx;
+  background: #f1f0f2;
+  border-radius: 8rpx;
+}
+
+.add-con image {
+  float: left;
+  width: 22rpx;
+  height: 28rpx;
+  margin-left: 50rpx;
+}
+
+.addCon {
+  float: left;
+  max-width: 600rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 28rpx;
+  margin-left: 18rpx;
+  color: #999;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.addRight {
+  position: absolute;
+  top: 66rpx;
+  right: 20rpx;
+  width: 16rpx;
+  height: 32rpx;
+}
+
+.address-ts {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 150rpx;
+  color: #333;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+
+.show-address .name-tel {
+  font-size: 28rpx;
+  color: #000;
+  padding: 30rpx 0 20rpx 0;
+}
+
+.show-address .addr-text {
+  font-size: 24rpx;
+  color: #888;
+  padding-bottom: 34rpx;
+  line-height: 36rpx;
+}
+
+form {
+  width: 100%;
+}
+
+.container {
+  display: block;
+  min-height: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 100rpx;
+}
+
+.payOrder {
+  width: 100%;
+}
+
+.main {
+  width: 710rpx;
+  margin: 0 auto;
+  background: #f1f0f2;
+}
+
+.orderModify-add {
+  position: relative;
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderModify-addTop {
+  width: 100%;
+  padding-top: 28rpx;
+}
+
+.orderModify-add-name {
+  float: left;
+  max-width: 50%;
+  height: 50rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  color: #333;
+  margin-left: 24rpx;
+  overflow: hidden;
+}
+
+.orderModify-add-tel {
+  float: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  color: #333;
+  margin-left: 40rpx;
+}
+
+.orderModify-add-con {
+  width: 100%;
+  height: 28rpx;
+  margin-top: 20rpx;
+}
+
+.orderModify-add-con image {
+  float: left;
+  width: 22rpx;
+  height: 28rpx;
+  margin-left: 24rpx;
+}
+
+.orderModify-addCon {
+  float: left;
+  max-width: 600rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 28rpx;
+  margin-left: 18rpx;
+  color: #999;
+  overflow: hidden;
+}
+
+.orderModify-addRight {
+  position: absolute;
+  top: 66rpx;
+  right: 20rpx;
+  width: 16rpx;
+  height: 32rpx;
+}
+
+form {
+  width: 100%;
+}
+
+.goods-list {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.goods-list .list-title {
+  font-size: 28rpx;
+  color: #000;
+  padding: 30rpx 0 25rpx 30rpx;
+}
+
+.goods-list  .a-goods {
+  width: 720rpx;
+  margin-left: 30rpx;
+  display: flex;
+  /*justify-content: space-between;*/
+  border-top: 1px solid #eee;
+  padding: 30rpx 30rpx 30rpx 0;
+}
+
+.goods-list  .a-goods .img-box {
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+  background-color: #d8d8d8;
+}
+
+.goods-list .img-box .img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.goods-list  .a-goods .text-box {
+  width: 510rpx;
+  box-sizing: border-box;
+  padding-top: 10rpx;
+}
+
+.a-goods .text-box .arow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a-goods .text-box .arow .goods-name {
+  width: 360rpx;
+  font-size: 26rpx;
+  height: 74rpx;
+  color: #000;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.a-goods .text-box .arow01 {
+  margin-bottom: 30rpx;
+}
+
+.a-goods .text-box .arow .goods-price {
+  font-size: 30rpx;
+  color: #cd9b01;
+  align-self: flex-start;
+}
+.a-goods .text-box .arow .goods-price .old{
+   text-decoration:line-through;
+   color: #666;
+   font-size: 26rpx;
+   margin-top: 15rpx;
+}
+.a-goods .text-box .arow .goods-label {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.a-goods .text-box .arow .goods-num {
+  font-size: 26rpx;
+  color: #cd9b01;
+}
+
+.peisong-way {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.peisong-way .row-box {
+  width: 720rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24rpx 0 24rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.peisong-way .row-label {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.peisong-way .right-text {
+  font-size: 28rpx;
+  color: #666;
+  padding-right: 30rpx;
+}
+
+.peisong-way .right-text text {
+  color: #cd9b01;
+}
+
+.peisong-way .right-text image {
+  width: 30rpx;
+  height: 25rpx;
+  margin-right: 15rpx;
+  margin-left: 15rpx;
+  position: relative;
+  top: 3rpx;
+}
+
+.peisong-way .liuyan {
+  width: 510rpx;
+  font-size: 28rpx;
+}
+
+.goods-info {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 120rpx;
+  padding-bottom: 24rpx;
+}
+
+.goods-info .row-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24rpx 30rpx 12rpx 30rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.goods-info .row-box .right-text {
+  text-align: right;
+}
+
+.goods-info .row-box .right-text text {
+  color: #cd9b01;
+}
+
+.jiesuan-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.jiesuan-box .to-pay-btn {
+  width: 250rpx;
+  text-align: center;
+  height: 100%;
+  line-height: 100rpx;
+  background-color: #cd9b01;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 0;
+}
+
+.jiesuan-box  .left-price {
+  display: flex;
+  width: 500rpx;
+  justify-content: flex-end;
+  line-height: 100rpx;
+  padding: 0 30rpx 0 0;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.jiesuan-box .total {
+  color: #cd9b01;
+  text-align: right;
+}
+
+.peisong-way .right-text.coupons {
+  border: 1px solid #cd9b01;
+  border-radius: 15rpx;
+  padding: 15rpx;
+  display: inline-block;
+  width: 150rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+}
+.peisong-way .right-text.red{
+  color: #cd9b01
+}
+.card-item {
+  width: 100%;
+  padding:24rpx 0 24rpx 30rpx;
+  font-size:30rpx;
+
+}
+
+
+.card-item image {
+  width: 35rpx;
+  height: 35rpx;
+  float: left;
+  margin-top: 5rpx;
+  margin-right: 15rpx;
+}
+
+.card-item .icon-nomal {
+  display: block;
+}
+
+.card-item .icon-active {
+  display: none;
+}
+
+.card-item.active .icon-nomal {
+  display: none;
+}
+
+.card-item.active .icon-active {
+  display: block;
+}

@@ -1,0 +1,21 @@
+<view class='container'>
+  <view class='main'>
+    <view class='address-box' wx:for="{{addrList}}" bindtap='{{bindtapName}}' data-id='{{item.address_id}}'>
+      <view class='choose-img'>
+        <image wx:if="{{item.is_default==1}}" src='/images/add-choose.png'></image>
+      </view>
+      <view class='address-info'>
+        <view class='address-name'>{{item.consignee}}</view>
+        <view class='address-m'>{{item.address}}</view>
+      </view>
+      <view class='address-modify' catchtap='toaddressModify' data-id='{{item.address_id}}'>
+        <image src='/images/add-modify.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='increase-box' bindtap='toaddressAdd'>
+    <image class='increase-img' src='/images/add-increase.png'></image>
+    <text class='increase-tit'>新增地址</text>
+    <image class='increase-arrow' src='/images/add-arrow.png'></image>
+  </view>
+</view>

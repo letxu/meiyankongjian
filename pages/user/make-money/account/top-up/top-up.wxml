@@ -1,0 +1,25 @@
+<import src="../../../../../wxParse/wxParse.wxml" />
+<view>
+  <view class="main">
+    <view class="title">
+      余额充值
+    </view>
+  
+    <view class="makeMoner">
+      <input name="money" type="number" value='{{money}}' placeholder='请输入充值金额' hover-class="textStyle" bindinput='money' wx:if="{{membership_level==3}}" disabled='disabled'></input>
+        <input name="money" type="number" value='{{money}}' placeholder='请输入充值金额' hover-class="textStyle" bindinput='money' wx:else></input>
+    </view>
+    <button hover-class='none' bindtap='makeMoney'>确认充值</button>
+    <view class="instructions">
+  
+    </view>
+  </view>
+  <view class="main1">
+    <view class="title">
+      充值说明
+    </view>
+    <view class="detail-item">
+       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>

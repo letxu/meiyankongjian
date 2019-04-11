@@ -1,0 +1,20 @@
+<view>
+  <view class="dealers-title">
+    <text>
+   我的下线会员
+  </text>
+  </view>
+  <view style='padding-top:100rpx;'>
+    <view class="dealers-item" wx:for="{{list}}">
+      <view>会员名称：
+        <text>{{item.wx_nikename}}</text>
+      </view>
+      <view>会员手机号码：
+        <text>{{item.mobile}}</text>
+      </view>
+      <view>会员注册时间：
+        <text>{{item.create_time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

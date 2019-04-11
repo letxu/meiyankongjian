@@ -1,0 +1,43 @@
+<view>
+  <view class="main">
+    <view class="title">
+      提现金额
+    </view>
+    <view class="card">
+      <view class='addCart' bindtap='toList' hidden="{{!hidden}}">
+        <view class='address-top clearfix'>
+          {{open_bank}}
+          <text class='add-name'>{{bankcard_id}}</text>
+        </view>
+        <image src="/images/left_icon.png"></image>
+      </view>
+      <view class="addCart" bindtap='addCart' hidden="{{hidden}}">
+        添加银行卡
+        <image src="/images/left_icon.png"></image>
+      </view>
+    </view>
+    <view class="makeMoner">
+      <input name="money" type="number" value='{{money}}' placeholder='请输入提现金额' hover-class="textStyle" bindinput='money'></input>
+    </view>
+    <view class="i-money">可提现:
+      <text>¥ {{income}}</text>
+    </view>
+      <button hover-class='none' bindtap='makeMoney'>确认提现</button>
+    
+    <view class="instructions">
+      <text bindtap='instr'>提现说明</text>
+    </view>
+  </view>
+  <view class="main1">
+    <view class="title">
+      明细列表
+    </view>
+    <view class="detail-item" wx:for="{{log}}" wx:key="{{item.id}}">
+      <view class="name">{{item.status}}</view>
+      <view class="right">
+        <view class="timer">{{item.createtime}}</view>
+        <view class="money">{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</view>

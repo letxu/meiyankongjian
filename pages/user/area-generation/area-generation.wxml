@@ -1,0 +1,30 @@
+<!--pages/guide/guide.wxml-->
+<view class="guide" style='height:{{height}}px'>
+  <image src='/images/apply-bg.jpg'></image>
+  <form>
+    <view class="form-grow">
+      <view class="left-icon">
+        <image src="/images/p-icon.png" style="width:28rpx;height:40rpx;margin-left:-16rpx;margin-top:-20rpx;"></image>
+      </view>
+      <view class="right-input">
+        <input type="number" maxlength="11" bindinput="inputPhoneNum" placeholder='请输入手机号' placeholder-class="hoverClass"></input>
+      </view>
+    </view>
+    <view class="form-grow1">
+      <view class="grow-box">
+        <view class="left-icon">
+          <image src="/images/code-icon.png"></image>
+        </view>
+        <view class="right-input1">
+          <input type="text" placeholder='请输入验证码'  bindinput="inputCode" placeholder-class="hoverClass"></input>
+        </view>
+      </view>
+      <view class="getcode" wx:if="{{send}}"  bindtap="sendMsg">获取验证码</view>
+       <view class="getcode disable" wx:if="{{!send}}">{{second+"s后重新发送"}}</view>
+  
+    </view>
+    <view class="next">
+      <button bindtap='apply'>提交申请</button>
+    </view>
+  </form>
+</view>

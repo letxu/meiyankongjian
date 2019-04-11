@@ -1,0 +1,51 @@
+<view>
+ <view class="title">绑定银行卡信息</view>
+ <form bindsubmit='addCatr' report-submit='true'>
+  <view class="item">
+    <view class="none"></view>
+    <view class="image">
+      <image src="/images/car-icon.png"></image>
+    </view>
+    <view class="input">
+      <input name="cartName" type="idcard" placeholder='请输入卡号'  placeholder-class='text'></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="none"></view>
+    <view class="image">
+      <image src="/images/car-icon.png"></image>
+    </view>
+    <view class="input">
+      <input name="bank" placeholder='请输入开户行' placeholder-class='text'></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="none"></view>
+    <view class="image">
+      <image src="/images/car-icon.png"></image>
+    </view>
+    <view class="input">
+      <input name="zbank" placeholder='请输入开户支行' placeholder-class='text'></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="none"></view>
+    <view class="image">
+      <image src="/images/prople-icon.png"></image>
+    </view>
+    <view class="input">
+      <input name="name" placeholder='请输入提现人姓名' placeholder-class='text'></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="none"></view>
+    <view class="image">
+      <image src="/images/phone-icon.png"></image>
+    </view>
+    <view class="input">
+      <input name="mobile" type='number' placeholder='请输入开户手机号码' placeholder-class='text' maxlength='11'></input>
+    </view>
+  </view>
+  <button class="confirm-btn"  form-type='submit'>绑定银行卡</button>
+ </form>
+</view>

@@ -1,0 +1,52 @@
+/* pages/user/addAddress/addAddress.wxss */
+.adress-item{
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-size: 36rpx;
+
+}
+.adress-item .name{
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 1.4rem;
+}
+.picker{
+   font-size: 30rpx;
+  line-height: 1.4rem;
+  color: #aeaeae;
+}
+.adress-item .input,picker{
+  flex: 3;
+}
+.adress-item textarea{
+  width: 100%;
+  height: 100rpx;
+ 
+}
+.phfont{
+  font-size: 30rpx;
+  color: #aeaeae;
+}
+button{
+  background: #cd9b01;
+   width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:50rpx; 
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    color: #fff;
+}
+button::after{
+  border-radius: 0;
+}
+.address-img{
+  width: 28rpx;
+  height: 38rpx;
+  margin-top: 5rpx;
+  position: absolute;
+  right: 20rpx;
+}

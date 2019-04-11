@@ -1,0 +1,7 @@
+/* pages/index/aDetail/aDetail.wxss */
+.content{
+  width: 95%;
+  margin: 0 auto;
+  font-size: 30rpx;
+  line-height: 40rpx
+}

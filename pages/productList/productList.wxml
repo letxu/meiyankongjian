@@ -1,0 +1,13 @@
+<!--pages/index/productList/productList.wxml-->
+<import src="/components/share.wxml" />
+<view class="product">
+  <navigator class="product-item" wx:for="{{list}}" wx:key="{{index}}" url="../productDetail/productDetail?id={{item.goods_id}}&name={{item.goods_name}}" hover-class='none'>
+    <image src="{{url}}{{item.goods_img}}"></image>
+    <view class="text">{{item.goods_name}}</view>
+    <view class="price">
+      <text class="red">¥{{item.dealer_price}}</text>
+      <text> ¥{{item.ordinary_user_price}}</text>
+    </view>
+  </navigator>
+ <template is="share"/>
+</view>

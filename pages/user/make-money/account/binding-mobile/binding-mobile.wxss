@@ -1,0 +1,121 @@
+/* pages/guide/guide.wxss */
+
+.guide>image {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.guide {
+  margin: 0;
+}
+
+form {
+  width: 100%;
+  position: absolute;
+  top: 350rpx;
+  z-index: 10;
+  left: 0;
+}
+.getcode.disable{
+  color: #999
+}
+.form-grow {
+  width: 90%;
+  margin: 0 auto;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10rpx;
+  margin-bottom: 55rpx;
+  display: flex;
+}
+
+.form-grow1 {
+  width: 90%;
+  margin: 0 auto;
+  height: 90rpx;
+  border-radius: 10rpx;
+  margin-bottom: 55rpx;
+  display: flex;
+}
+
+.form-grow1 .grow-box {
+  width: 430rpx;
+  height: 90rpx;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10rpx;
+  /* margin-left:0 */
+}
+
+.form-grow1 {
+  display: flex;
+}
+
+.left-icon {
+  width: 100rpx;
+  position: relative;
+}
+
+.form-grow .right-input {
+  width: 504rpx;
+}
+
+.left-icon image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30rpx;
+  margin-top: -30rpx;
+}
+
+.right-input input {
+  height: 90rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.form-grow .right-input1 {
+  flex: 4;
+}
+
+.grow-box .right-input1 input {
+  height: 90rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.form-grow .getcode {
+  flex: 3;
+}
+
+.hoverClass {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.getcode {
+  width: 218rpx;
+  font-size: 30rpx;
+  color: #fea304;
+  line-height: 90rpx;
+  background: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+}
+.next{
+  width:90%;
+  margin:100rpx auto 0;
+}
+.next button{
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+   color: #fea304;
+   border-radius: 10rpx;
+   font-size: 30rpx;
+}

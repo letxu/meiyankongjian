@@ -1,0 +1,7 @@
+<!--pages/index/vipLog/vipLog.wxml-->
+<import src="/components/share.wxml" />
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="content">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  <template is="share"/>
+</view>

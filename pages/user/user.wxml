@@ -1,0 +1,125 @@
+<!--pages/user/user.wxml-->
+<import src="/components/share.wxml" />
+<view>
+  <view class="user-top">
+    <image src="/images/user-bg.jpg" class="bg-img"></image>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <navigator url='orderList/orderList' class="pro-item">
+    <text>我的订单</text>
+    <image src="/images/left_icon.png"></image>
+    <text style="float:right;margin-right:30rpx;font-size:24rpx;">全部订单</text>
+  </navigator>
+  <view class="user-tab">
+    <navigator url='orderList/orderList?currentTab=1' hover-class='none'>
+      <view>
+        <image src="/images/unpaid.png"></image>
+        <text wx:if="{{oneNum>0}}">{{oneNum}}</text>
+      </view>
+      <view>待付款</view>
+    </navigator>
+    <navigator url='orderList/orderList?currentTab=2' hover-class='none'>
+      <view>
+        <image src="/images/ufahuo.png"></image>
+        <text wx:if="{{twoNum>0}}">{{twoNum}}</text>
+      </view>
+      <view>待发货</view>
+    </navigator>
+    <navigator url='orderList/orderList?currentTab=3' hover-class='none'>
+      <view>
+        <image src="/images/fahuo.png"></image>
+        <text wx:if="{{threeNum>0}}">{{threeNum}}</text>
+      </view>
+      <view>已发货</view>
+    </navigator>
+    <navigator url='orderList/orderList?currentTab=4' hover-class='none'>
+      <view>
+        <image src="/images/wancheng.png"></image>
+        <text wx:if="{{fourNum>0}}">{{fourNum}}</text>
+      </view>
+      <view>已完成</view>
+    </navigator>
+  </view>
+   <view class="pro-item" wx:if="{{level==1}}">
+    <view>
+      <image src="/images/u-icon2.png"></image>
+    </view>
+    <text style="color:#cd9b01">您已成为VIP会员</text>
+  </view>
+  <navigator url='apply-dealers/apply-dealers' class="pro-item" wx:if="{{level==0 && isOpen==1}}">
+    <view>
+      <image src="/images/u-icon1.png"></image>
+    </view>
+    <text>请完善个人信息</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+    <navigator url='/pages/user/make-money/account/top-up/top-up' class="pro-item" wx:if="{{level==3 && isOpen==1}}">
+    <view>
+      <image src="/images/u-icon1.png"></image>
+    </view>
+    <text>充值成为VIP会员</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+    <navigator url='dealers/last/last' class="pro-item">
+    <view>
+      <image src="/images/u-icon3.png"></image>
+    </view>
+    <text>我的上级会员</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+  <navigator url='dealers/dealers' class="pro-item" wx:if="{{level==2}}">
+    <view>
+      <image src="/images/u-icon3.png"></image>
+    </view>
+    <text>我的会员信息</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+  <!-- <navigator url='card/card' class="pro-item" wx:if="{{isOpen==1}}">
+    <view>
+      <image src="/images/car-icon.png"></image>
+    </view>
+    <text>银行卡</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator> -->
+  <navigator url='make-money/log/log' class="pro-item">
+    <view>
+      <image src="/images/u-icon3.png"></image>
+    </view>
+    <text>返现明细</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+  <navigator url='make-money/account/account' class="pro-item" wx:if="{{isOpen==1}}">
+    <view>
+      <image src="/images/u-icon4.png"></image>
+    </view>
+    <text>我的账户</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+
+  <view class="pro-item" bindtap='invitation'>
+    <view>
+      <image src="/images/invitation.png"></image>
+    </view>
+    <text>邀请好友</text>
+    <image src="/images/left_icon.png"></image>
+  </view>
+  <navigator url='addressList/addressList' class="pro-item">
+    <view>
+      <image src="/images/u-icon5.png"></image>
+    </view>
+    <text>收货地址</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+  <!-- <navigator target = "miniProgram" app-id="wx18a2ac992306a5a4" path="pages/apps/largess/detail?accountId=2849563" open-type='navigate'>跳转</navigator> -->
+
+  <!-- <view bindtap='addRess' class="pro-item">
+          <text>收货地址</text>申请工程师</button>
+    <!-- <view bindtap='addRess' class="pro-item">
+    <text>收货地址</text>
+    <image src="/images/left_icon.png"></image>
+  </view> -->
+ <template is="share"/>
+</view>

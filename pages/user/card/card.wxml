@@ -1,0 +1,11 @@
+<view class="card">
+  <view class="card-item" wx:for="{{cards}}" data-index='{{index}}' data-id='{{item.id}}' wx:key="{{item.id}}" bindlongpress="deleteItem">
+    <view>{{item.open_bank}} </view>
+    <view>{{item.bankcard_id}}</view>
+  </view>
+  <view class='increase-box' bindtap='toaddressAdd'>
+    <image class='increase-img' src='/images/add-increase.png'></image>
+    <text class='increase-tit'>添加银行卡</text>
+    <image class='increase-arrow' src='/images/add-arrow.png'></image>
+  </view>
+</view>

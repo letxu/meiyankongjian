@@ -1,0 +1,20 @@
+<import src="/components/share.wxml" />
+<view class="container">
+  <view class="product-box">
+    <view class="product">
+      <navigator wx:for="{{product}}" wx:key="{{item.id}}" url="../productDetail/productDetail?id={{item.goods_id}}&name={{item.goods_name}}" hover-class='none' class="product-item addHeight">
+        <image src="{{url}}{{item.goods_thumbnail}}" lazy-load="true"></image>
+        <view class="text"> {{item.goods_name}}</view>
+        <view class="price">
+          <view>
+            <view>{{item.ordinary_user_price_title}}\r\t\r\t\r\t
+              <text class="red">¥ {{item.ordinary_user_price}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+      <view style='clear:both'></view>
+    </view>
+  </view>
+  <template is="share"/>
+</view>

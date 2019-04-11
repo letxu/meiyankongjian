@@ -1,0 +1,17 @@
+<view>
+  <view class="dealers-title">
+    <text>
+   我的上级
+  </text>
+  </view>
+  <view style='padding-top:100rpx;' wx:if="{{list.wx_nikename!=underfined}}">
+    <view class="dealers-item">
+      <view>会员名称：
+        <text>{{list.wx_nikename}}</text>
+      </view>
+      <view>会员手机号码：
+        <text>{{list.mobile}}</text>
+      </view>
+    </view>
+  </view>
+</view>

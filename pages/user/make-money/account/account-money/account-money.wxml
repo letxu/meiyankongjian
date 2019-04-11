@@ -1,0 +1,18 @@
+<view>
+  <view class="main">
+    <view class="title">
+      转为余额
+    </view>
+    <view class="makeMoner">
+      <input name="money" type="number" value='{{money}}' placeholder='请输入金额' hover-class="textStyle" bindinput='money'></input>
+    </view>
+    <view class="i-money">可转金额:
+      <text>¥ {{income}}</text>
+    </view>
+     
+    <!-- <view class="instructions">
+      <text bindtap='instr'>提现说明</text>
+    </view> -->
+  </view>
+   <button hover-class='none' bindtap='toBalance'>转为余额</button>
+</view>

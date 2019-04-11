@@ -1,0 +1,30 @@
+<!--pages/cart/template-cart/template-cart.wxml-->
+<template name="cart-goods-list">
+  <view class="cart-top">
+    <image src="/images/no-cart.png"></image>
+     <view> 购物车竟然是空的~</view>
+  </view>
+
+</template>
+<template name="no-goods" >
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="close" bindtap="onCancel">
+      <image src="/images/close.png"></image>
+    </view>
+    <view class="modal-content">
+      <view class="content-top">ZH女装特卖旗舰店</view>
+      <view class="coupon">
+        <view class="coupon-detail">
+          <view class="price">5元</view>
+          <view>满99元立减</view>
+          <view>使用期限2018.7.26—2018.8.31</view>
+        </view>
+        <view class="receive-detail">
+          <text wx:if="{{receive}}" class="receive" bindtap="receive">领取</text>
+          <text wx:if="{{notReceive}}" class="not-receive">已领取</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

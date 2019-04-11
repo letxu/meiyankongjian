@@ -1,0 +1,19 @@
+<!--pages/user/dealers/dealers.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="dealers-title">
+  <text>
+   我的会员信息
+  </text>
+</view>
+<view>
+ <navigator url='dealerDetail/dealerDetail' class="pro-item">
+      <text>我的下线会员</text>
+      <image src="/images/left_icon.png"></image>
+  </navigator>
+  <view class="invite">
+   邀请说明
+   <view>
+       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+   </view>
+  </view>
+</view>

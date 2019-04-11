@@ -1,0 +1,15 @@
+<import src="/components/share.wxml" />
+<view class="container">
+  <view class="zone" wx:for="{{cateItems}}" wx:key="{{item.id}}">
+    <navigator url="../classifyList?id={{item.id}}&name={{item.classify_name}}" hover-class="none" class="title">
+      {{item.classify_name}}
+      <image src="/images/left_icon.png"></image>
+    </navigator>
+    <view class="list-img">
+      <block wx:for="{{item.children}}" wx:key="{{item.id}}">
+        <image src="{{url}}{{item.image}}" data-id="{{item.id}}" data-name="{{item.classify_name}}" bindtap="toGoods"></image>
+      </block>
+    </view>
+  </view>
+  <template is="share"/>
+</view>

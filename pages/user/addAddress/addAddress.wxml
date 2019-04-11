@@ -1,0 +1,39 @@
+<!--pages/user/addAddress/addAddress.wxml-->
+<view>
+  <form bindsubmit="bindSave">
+  <view class="adress-item">
+    <view class="name">联系人</view>
+    <view class="input">
+      <input placeholder="名字" placeholder-class="phfont" name="linkMan"></input>
+    </view>
+  </view>
+  <view class="adress-item">
+    <view class="name">手机号码</view>
+    <view class="input">
+      <input type="number" name="mobile" maxlength="11"  placeholder="11位手机号" placeholder-class="phfont"></input>
+    </view>
+  </view>
+  <view class="adress-item" bindtap="selectCity">
+    <view class="name">选择地区</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{region[0]}} {{region[1]}} {{region[2]}}
+      </view>
+    </picker>
+     <image src="/images/address-icon.png" class="address-img"></image>
+  </view>
+  <view class="adress-item">
+    <view class="name">详细地址</view>
+    <view class="input">
+      <textarea placeholder="街道门牌信息"  name="address" placeholder-class="phfont"  />
+    </view>
+  </view>
+  <view class="adress-item">
+    <view class="name">邮政编码</view>
+    <view class="input">
+      <input type="number"  name="code" maxlength="6" placeholder="邮政编码" placeholder-class="phfont" ></input>
+    </view>
+  </view>
+  <button formType="submit" hover-class='none' >完成</button>
+  </form>
+</view>

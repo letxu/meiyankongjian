@@ -1,0 +1,30 @@
+<!--pages/user/make-money/account/account.wxml-->
+<!--pages/user/dealers/dealers.wxml-->
+  <view class="dealers-title">
+    <text>
+    我的会员信息
+    </text>
+  </view>
+  <view>
+  <view class="account">
+    <view>收益金额：
+      <text>{{income}}</text>
+    </view>
+    <view>我的余额：
+      <text>{{account_balance}}</text>
+    </view>
+  </view>
+  <view bindtap='makeMoney' class="pro-item">
+    <text>收益提现</text>
+    <image src="/images/left_icon.png"></image>
+  </view>
+  <navigator url='account-money/account-money' class="pro-item">
+    <text>转为余额</text>
+    <image src="/images/left_icon.png"></image>
+  </navigator>
+   <view bindtap='topUp' class="pro-item" >
+    <text>余额充值</text>
+    <image src="/images/left_icon.png"></image>
+  </view>
+  
+</view>

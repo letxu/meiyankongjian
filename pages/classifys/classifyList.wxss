@@ -1,0 +1,26 @@
+/* pages/list/list.wxss */
+page{
+  background: #f1f0f2
+}
+.product .product-item {
+  height: 500rpx
+}
+.product{
+  margin-top: 5rpx;
+}
+.product .product-item .price .red{
+  color: #fe5401;
+  margin-right: 30rpx;
+  text-decoration:none;
+  margin-bottom: 10rpx
+}
+.product .product-item .price{
+  width: 329rpx;
+}
+.product .product-item.addHeight{
+  height: 465rpx;
+}
+.product-box .price view {
+  text-align: left;
+
+}

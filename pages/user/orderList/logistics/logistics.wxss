@@ -1,0 +1,124 @@
+/* pages/user/orderList/logistics/logistics.wxss */
+
+.li {
+  list-style: none;
+}
+
+.package-status {
+  padding: 18rpx 0 0 0;
+}
+
+.package-status .status-list {
+  margin: 0;
+  padding: 0;
+  margin-top: -5rpx;
+  padding-left: 8rpx;
+  list-style: none;
+}
+
+.package-status .status-list>.li {
+  border-left: 2rpx solid #0278d8;
+  text-align: left;
+}
+
+.package-status .status-list>.li:before {
+  /* 流程点的样式 */
+  content: '';
+  border: 3rpx solid #0278d8;
+  background-color: #0278d8;
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  margin-left: -6rpx;
+  margin-right: 10rpx;
+}
+
+.package-status .status-box {
+  overflow: hidden;
+}
+
+.package-status .status-list>.li {
+  height: auto;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.package-status .status-list {
+  margin-top: -8rpx;
+}
+
+.package-status .status-box {
+  position: relative;
+}
+
+.package-status .status-box:before {
+  content: "";
+  background-color: #f3f3f3;
+  display: block;
+  position: absolute;
+  top: -8rpx;
+  left: 20rpx;
+  width: 18rpx;
+  height: 6rpx;
+}
+
+.package-status .status-list {
+  margin-top: 0rpx;
+  padding-bottom: 30rpx;
+}
+
+.status-list>li:not(:first-child) {
+  padding-top: 10rpx;
+}
+
+.status-content-before {
+  text-align: left;
+  margin-left: 25rpx;
+  margin-top: -10rpx;
+  font-size: 26rpx;
+  position: relative;
+  line-height: 45rpx;
+  top: -10rpx;
+}
+
+.status-content-latest {
+  text-align: left;
+  margin-left: 25rpx;
+  color: #0278d8;
+  margin-top: -20rpx;
+}
+
+.status-time-before {
+  text-align: left;
+  margin-left: 25rpx;
+  font-size: 24rpx;
+  margin-top: 5rpx;
+}
+
+.status-time-latest {
+  text-align: left;
+  margin-left: 25rpx;
+  color: #0278d8;
+  font-size: 10rpx;
+  margin-top: 5rpx;
+}
+
+.status-line {
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 25rpx;
+  margin-top: 10rpx;
+  padding-bottom: 5rpx;
+}
+
+.list {
+  padding: 0 20rpx;
+  background-color: #f8f8f8;
+  margin: 10rpx 0 0 25rpx;
+  border: 1rpx solid #ebebeb;
+}
+
+.list .li {
+  line-height: 30rpx;
+  color: #616161;
+}

@@ -1,0 +1,60 @@
+<!--pages/cart/cart.wxml-->
+<import src="/components/share.wxml" />
+<view class="container">
+  <!--pages/cart/template-cart/template-cart.wxml-->
+  <view class="cart-top" hidden='{{iscart}}'>
+    <image src="/images/no-cart.png"></image>
+    <view> 购物车竟然是空的~</view>
+  </view>
+  <view hidden="{{hidden}}">
+    <form bindsubmit="formSubmit">
+      <view class="list-top">
+        <view class="label">美颜空间</view>
+        <view class="edit-btn" hidden="{{!saveHidden}}" bindtap="editTap">编辑</view>
+        <view class="edit-btn" hidden="{{saveHidden}}" bindtap="saveTap">完成</view>
+      </view>
+      <view class='goodsList'>
+        <view class='goods-box' wx:for="{{carts}}" wx:key="{{index}}">
+          <view class="good-left">
+            <view class="icon {{item.is_check? 'active':''}}" data-index="{{index}}" bindtap="checkboxChange"></view>
+          </view>
+          <view class='goods-info'>
+            <view class='goods-img'>
+              <image src='{{url}}{{item.goods_thumbnail}}'></image>
+            </view>
+            <view class='text-box'>
+              <view class="goods-tit {{level!=0 ?'level':''}}">{{item.goods_name}}</view>
+              <view class="goods-label" wx:if='{{item.opt_text!=null}}'>{{item.opt_text}}</view>
+
+              <view class="goods-price" wx:if='{{item.opt_text==null}}'>
+                {{item.ordinary_user_price_title}}\r\t\r\t\r\t <text>¥ {{item.ordinary_user_price}}</text>
+              </view>
+              <view class="goods-price" wx:if='{{item.opt_text!=null}}'>
+                {{item.ordinary_user_price_title}}\r\t\r\t\r\t <text>¥ {{item.opt_price}}</text>
+              </view>
+            </view>
+            <view class='num-box'>
+              <view class='num-plus' data-index='{{index}}' bindtap='jiaBtnTap'>+</view>
+              <view class='num-show'>
+                <input type='number' value='{{item.goods_number}}' disabled></input>
+              </view>
+              <view class='num-less' data-index='{{index}}' bindtap='jianBtnTap'>-</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="jiesuan-box">
+        <view class='settle-box'>
+          <view class='choose-all'>
+            <view class=" {{isAllSelect?'active':''}}" bindtap="chooseAll"></view>
+          </view>
+          <text class='settle-t'>全选</text>
+          <button class="settle {{noSelect?'no-select':''}}" hidden="{{!saveHidden}}" bindtap='subOrder'>下单</button>
+          <button class="settle {{noSelect?'no-select':''}}" hidden="{{saveHidden}}" catchtap="delItem">删除</button>
+          <view class="total" hidden="{{!saveHidden}}">合计：¥ {{totalMoney}}</view>
+        </view>
+      </view>
+    </form>
+  </view>
+  <template is="share"/>
+</view>

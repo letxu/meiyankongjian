@@ -1,0 +1,16 @@
+<!--pages/invitation/invitation.wxml-->
+<view class="inviation" style='height:{{height}}px'>
+  <image src="/images/share-bg.jpg"></image>
+  <view class="inviation-img">
+    <view class='view_img'>
+      <image class='img'  bindtap="previewImage" src='{{url}}{{qrCode}}'></image>
+    </view>
+  </view>
+  <include src="/components/footer/footer.wxml" />
+  <view class="down-img">
+    <button open-type='share'>
+      <image src="/images/share-wx.png"></image>
+    </button>
+    <image class="down" src="/images/down.png" bindtap='downloadImage'></image>
+  </view>
+</view>

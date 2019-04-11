@@ -1,0 +1,18 @@
+<view>
+  <view class="cardBox">
+
+    <view class="card-item {{curIndex == index ? 'active' : ''}}" wx:for="{{card}}" data-id='{{item.id}}' data-index='{{index}}' bindtap='couponCheck' bindlongpress="deleteItem">
+      <image src="https://cdn.it120.cc/images/weappshop/gou.png" class="icon-nomal"></image>
+      <image src="https://meiyankongjian.com/rejiangupload/yes.png" class="icon-active"></image>
+      <view class="card-right">
+        <view>{{item.open_bank}}</view>
+        <view>{{item.bankcard_id}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='increase-box' bindtap='toaddressAdd'>
+    <image class='increase-img' src='/images/add-increase.png'></image>
+    <text class='increase-tit'>添加银行卡</text>
+    <image class='increase-arrow' src='/images/add-arrow.png'></image>
+  </view>
+</view>
